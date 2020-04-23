@@ -1,0 +1,11 @@
+policy_module(private,1.0)
+require{
+	type unconfined_t;
+	type setroubleshoot_d;
+
+}
+
+type private_file_t;
+fs_associate(private_file_t);
+allow unconfined_t private_file_t:{dir files } relable;
+allow setroubleshoot_d private_file_t:{dir files } getattr;
