@@ -6,6 +6,6 @@ require{
 }
 
 type private_file_t;
-fs_associate(private_file_t);
+fs_associate(private_file_t)
 allow unconfined_t private_file_t:{dir files } { relabel getattr } ;
 allow setroubleshoot_d private_file_t:{dir files } getattr;
